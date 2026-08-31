@@ -20,3 +20,22 @@
 - Replaced all team initial-circle placeholders with Unsplash headshot photos
 - Updated CSS for image handling: hero overlay, object-fit cover, responsive image sizing, team photo circles
 - Updated hero text/button colors to work on dark background
+
+# 2026-08-27 16:30 - Deployment Pipeline Setup
+
+> Discussed Netlify credit consumption (300 credit/month cap on new Free plan). Set up a local > UAT > prod pipeline to control credit usage.
+
+**Actions Taken:**
+- Diagnosed Netlify credit drain: 195 of 196 credits consumed by 13 production deploys (~15 credits each). Traffic/bandwidth negligible.
+- Set Netlify to "Stopped builds" so GitHub pushes no longer trigger auto-deploys (no credit burn during dev)
+- Made GitHub repo public and enabled GitHub Pages (private repos need paid plan for Pages)
+- Added real contact info to site: phone 780-238-2335, email reception@harmonymyotherapy.com
+- Added Facebook and Instagram social links to footer
+- Fixed favicon (cropped icon mark from logo instead of squishing full wordmark)
+
+**Pipeline established:**
+- Local (dev): edit + preview by opening index.html
+- GitHub Pages (UAT): https://ackoinos.github.io/harmony-myotherapy/ -- Kristin's review link, free/unlimited
+- Netlify (prod): live site at nimble-kheer-85f421.netlify.app, manual publish only
+
+**Client status:** Kristin approved the design. Old Wix site being finished by prior developer on Monday. Waiting on Wix login to point domain (harmonymyotherapy.com). Work is pro bono for initial build.
