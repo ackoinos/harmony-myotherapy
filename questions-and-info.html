@@ -96,6 +96,10 @@
                     <button class="faq-question" aria-expanded="false">Mouth Breathing<span class="faq-icon"></span></button>
                     <div class="faq-answer">
                         <p>Chronic mouth breathing is one of the most common signs of orofacial dysfunction. Sealed lips and nasal breathing filter and humidify every breath, support proper tongue resting posture, and contribute to healthy facial growth. When breathing shifts to the mouth, the whole system compensates, which over time can affect facial development, sleep, and airway health.</p>
+                        <div class="qa-figures">
+                            <figure><img src="images/qa/open-mouth-posture.webp" alt="Open mouth resting posture" loading="lazy"><figcaption>Open mouth resting posture</figcaption></figure>
+                            <figure><img src="images/qa/enlarged-tonsils.webp" alt="Enlarged tonsils" loading="lazy"><figcaption>Enlarged tonsils can restrict the airway</figcaption></figure>
+                        </div>
                     </div>
                 </div>
                 <div class="faq-item">
@@ -103,6 +107,11 @@
                     <div class="faq-answer">
                         <p>Tongue-tie is a complex issue that can affect many people unknowingly, and its impact can be very different from person to person. The tongue performs many complex functions such as elevating, retracting, protruding, and lateralizing. When a small piece of tissue holds the tongue down like a rope, a patient may experience difficulty with eating, chewing, posture, swallowing, and speech, as well as stomach upset (an abnormal swallow pattern can contribute to swallowing extra air).</p>
                         <p>When you see a Certified Orofacial Myologist, we complete a functional assessment to see whether there is a dysfunction of the orofacial muscles and, if a tongue-tie is present, whether it is contributing to abnormal muscle use. If a release (frenectomy) is needed, we work with patients before and after the procedure to optimize the surgical outcome.</p>
+                        <div class="qa-figures">
+                            <figure><img src="images/qa/tongue-tie.webp" alt="Example of a tongue-tie" loading="lazy"><figcaption>Example of a tongue-tie</figcaption></figure>
+                            <figure><img src="images/qa/maxillary-frenum.webp" alt="Restrictive maxillary frenum" loading="lazy"><figcaption>Restrictive maxillary frenum</figcaption></figure>
+                            <figure><img src="images/qa/tongue-tie-release.webp" alt="Tongue-tie release" loading="lazy"><figcaption>Tongue-tie release at Harmony</figcaption></figure>
+                        </div>
                     </div>
                 </div>
                 <div class="faq-item">
@@ -110,6 +119,11 @@
                     <div class="faq-answer">
                         <p>An anterior open bite can develop when the tongue is unable to do its job, often because of a tongue-tie. When the tongue's movement is restricted, a patient may adapt to a "backwards swallow pattern" where the tongue pushes forward on the front teeth to complete the swallow.</p>
                         <p>After the tongue has good mobility, we work on building strength and developing patterns to regain normal function of the tongue and surrounding muscles. Every patient is different and may need the help of multiple practitioners to get the best outcome.</p>
+                        <div class="qa-figures">
+                            <figure><img src="images/qa/anterior-open-bite.webp" alt="Example of an anterior open bite" loading="lazy"><figcaption>Example of an anterior open bite</figcaption></figure>
+                            <figure><img src="images/qa/open-bite-result.webp" alt="Change in occlusion after therapy" loading="lazy"><figcaption>Change in occlusion following therapy</figcaption></figure>
+                            <figure><img src="images/qa/narrow-vs-normal-arch.webp" alt="Narrow arch versus normal arch" loading="lazy"><figcaption>Narrow arch vs. normal arch</figcaption></figure>
+                        </div>
                         <p><em>Individual results may vary. Any images shown are for educational purposes and represent specific patients; they do not guarantee similar results.</em></p>
                     </div>
                 </div>
@@ -118,6 +132,9 @@
                     <div class="faq-answer">
                         <p>Thumb and finger sucking can have a negative effect on craniofacial development, and can also negatively impact a child's airway, speaking, and swallowing. Trying to eliminate a habit like thumb or finger sucking can cause a lot of anxiety and stress for the child, and can be exhausting for parents who feel like they've tried every option.</p>
                         <p>We use a proven, scientific program that is encouraging and fun to eliminate the habit with no harsh appliances. Let us help make this a positive change. Call today to book your appointment.</p>
+                        <div class="qa-figures">
+                            <figure><img src="images/qa/thumb-sucking.jpg" alt="Thumb sucking" loading="lazy"><figcaption>Thumb and finger sucking can affect development</figcaption></figure>
+                        </div>
                     </div>
                 </div>
                 <div class="faq-item">
@@ -147,6 +164,9 @@
                             <li>Screening for tongue-tie and tethered oral tissues, with referral and feeding support before and after a release</li>
                         </ul>
                         <p>Families are best served when their providers work together, and Kristin is committed to bridging the gap between lactation, dental, and other healthcare professionals so you receive coordinated care at every stage.</p>
+                        <div class="qa-figures">
+                            <figure><img src="images/qa/breastfeeding.jpg" alt="Breastfeeding infant" loading="lazy"></figure>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -166,6 +186,12 @@
             </div>
         </div>
     </section>
+
+    <!-- Lightbox overlay -->
+    <div class="lightbox" id="lightbox" hidden>
+        <button class="lightbox-close" aria-label="Close">&times;</button>
+        <img src="" alt="" class="lightbox-img" id="lightbox-img">
+    </div>
 
     <!-- Footer -->
     <footer class="site-footer">
@@ -231,6 +257,31 @@
                 q.setAttribute('aria-expanded', !expanded);
                 q.closest('.faq-item').classList.toggle('open');
             });
+        });
+
+        // Lightbox for clinical photos
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        function openLightbox(src, alt) {
+            lightboxImg.src = src;
+            lightboxImg.alt = alt || '';
+            lightbox.hidden = false;
+            requestAnimationFrame(() => lightbox.classList.add('open'));
+            document.body.style.overflow = 'hidden';
+        }
+        function closeLightbox() {
+            lightbox.classList.remove('open');
+            document.body.style.overflow = '';
+            setTimeout(() => { lightbox.hidden = true; lightboxImg.src = ''; }, 250);
+        }
+        document.querySelectorAll('.qa-figures img').forEach(img => {
+            img.addEventListener('click', () => openLightbox(img.src, img.alt));
+        });
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox || e.target.classList.contains('lightbox-close')) closeLightbox();
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !lightbox.hidden) closeLightbox();
         });
     </script>
 </body>
