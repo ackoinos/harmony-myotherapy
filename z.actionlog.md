@@ -69,3 +69,22 @@
 - "For Referring Professionals" tab (separate professional referral form) - not yet built
 - Harmony Integrative Orofacial Health page - separate future project (she'll send details)
 - Wix login still needed to point the domain
+
+# 2026-09-15 - Round 3 tweaks + bug fix + Q&A media
+
+> Follow-up review: Read Bio buttons not expanding; add original Q&A clinical photos/links/videos; speech card was a different color (make it match); Karen Pollock and Erin Larkin headshots sit lower than the others.
+
+**Actions Taken:**
+- BUG FIX: hidden lightbox overlay (`position:fixed; inset:0`) was intercepting ALL clicks because `[hidden]` was overridden by `display:flex`. This silently blocked the Read Bio toggles, FAQ accordion, and gallery. Fixed with `.lightbox[hidden] { display:none }`. Diagnosed via headless Puppeteer click test (elementFromPoint returned the lightbox div). Committed straight to master.
+- Scraped the original Q&A clinical photos via CDP network interception (Wix lazy-loads per accordion topic; had to click each topic + capture image responses). Re-fetched at larger size, renamed to friendly names in `images/qa/`.
+- Added photos to Q&A topics: Mouth Breathing (open mouth posture, enlarged tonsils), Tongue-Tie (tongue-tie, maxillary frenum, release), Anterior Open Bite (open bite, post-therapy result, narrow vs normal arch), Habit Elimination (thumb sucking), Lactation (breastfeeding). Added lightbox to Q&A page.
+- Scraped Q&A for videos/links: no real embedded videos (only Wix player JS). Two real reference links added as clickable: Camacho 2015 sleep apnea study (academic.oup.com) and Kristin's Buteyko Clinic International profile.
+- Removed the highlighted green background on the Speech & Language services card so it matches the other cards
+- Fixed Karen Pollock + Erin Larkin headshot framing (their faces sit lower in the source photos) with `.team-img-lower { object-position: center 35% }`
+- Worked on branches `feature/qa-photos` and `feature/round3-tweaks`, merged to master
+
+**Still outstanding:**
+- Blog is static (one post); dynamic self-service posting would need a CMS (future paid option)
+- "For Referring Professionals" tab - not yet built
+- Harmony Integrative Orofacial Health page - separate future project
+- Wix login still needed to point the domain
