@@ -364,13 +364,6 @@ img {
     object-fit: contain;
 }
 
-/* --- SLP service card (highlighted) --- */
-.service-card-slp {
-    position: relative;
-    background: var(--color-primary-light);
-    border-color: var(--color-primary);
-}
-
 .slp-note {
     margin-top: 0.75rem !important;
     font-size: 0.82rem !important;
@@ -555,6 +548,11 @@ img {
     height: 100%;
     object-fit: cover;
     object-position: center top;
+}
+
+/* Photos where the face sits lower in the frame - pull the crop up so faces stay centered like the others */
+.team-img-lower {
+    object-position: center 35%;
 }
 
 .team-intro {
@@ -936,6 +934,17 @@ img {
     margin-top: 0.4rem;
     text-align: center;
     font-style: italic;
+}
+
+.faq-answer a {
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+.faq-answer a:hover {
+    color: var(--color-primary-dark);
+}
+.qa-reference {
+    font-size: 0.85rem !important;
 }
 
 .faq-item {
