@@ -39,3 +39,33 @@
 - Netlify (prod): live site at nimble-kheer-85f421.netlify.app, manual publish only
 
 **Client status:** Kristin approved the design. Old Wix site being finished by prior developer on Monday. Waiting on Wix login to point domain (harmonymyotherapy.com). Work is pro bono for initial build.
+
+# 2026-09-09 15:00 - Jen/Jamie site review pending
+
+> Kristin's email (re: new Integrative company) mentioned she's meeting Jen and Jamie to review the Harmony Myotherapy site and give better guidance.
+
+**Actions Taken:**
+- Added to Outstanding list in z.readme.md: waiting on guidance from Kristin's review with Jen and Jamie -- likely source of the pending content/photo changes.
+- Tracked as MasterToDo KOI-00082 under Koinos.
+- Acknowledged in the reply drafted to Kristin (reply lives in the harmony-integrative-poc project since it's primarily about the new company).
+
+# 2026-09-15 - Round 2 tweaks (from Kristin follow-up review)
+
+> Kristin reviewed the first round and asked for: drop the "SLP" abbreviation, shorten default team bios (full on click), bigger therapist photos / lightbox, make the gallery an actual reel, rebuild Q&A to match the services accordion as its own tab, and add a Blog tab. Provided referral/Q&A/blog URLs.
+
+**Actions Taken:**
+- Transcribed the full Loom video (had to pull the complete MP4 via Loom's transcoded-url API; the browser-scraped chunk was video-only/no audio). Fixed a cublas cu12/cu13 DLL mismatch in the GPU whisper venv to run faster-whisper.
+- Removed "SLP" badge/term from the speech services card
+- Team cards: added short one-line intros (shown by default), full bios behind Read Bio, photos enlarged to 210px, click-to-open lightbox
+- Gallery converted from manual carousel to a continuous auto-scrolling reel (pauses on hover, click opens lightbox)
+- Created `questions-and-info.html`: dedicated page, accordion of all 12 real topics from her Wix Q&A, styled like the FAQ/services section
+- Created `blog.html`: dedicated blog listing page with her existing tongue-tie training post; structured for easy additions
+- Added Questions & Info + Blog to nav and footer on all pages
+- Referral form: hidden Web3Forms static form still in back pocket; live links point to Wix referral for now
+- Worked on branch `feature/round2-tweaks`, merged to master with --no-ff
+
+**Still outstanding:**
+- Blog is static (Wix blog is dynamic). If Kristin posts often and wants self-service, a small CMS is a future paid option.
+- "For Referring Professionals" tab (separate professional referral form) - not yet built
+- Harmony Integrative Orofacial Health page - separate future project (she'll send details)
+- Wix login still needed to point the domain
