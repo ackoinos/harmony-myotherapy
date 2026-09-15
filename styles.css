@@ -616,15 +616,23 @@ img {
     font-size: 0.9rem;
     color: var(--color-text-light);
     line-height: 1.6;
+    text-align: left;
     max-height: 0;
     overflow: hidden;
     opacity: 0;
     margin-top: 0;
-    transition: max-height 0.4s ease, opacity 0.3s ease, margin-top 0.3s ease;
+    transition: max-height 0.5s ease, opacity 0.3s ease, margin-top 0.3s ease;
+}
+
+.team-bio p {
+    margin-bottom: 0.75rem;
+}
+.team-bio p:last-child {
+    margin-bottom: 0;
 }
 
 .team-card.bio-open .team-bio {
-    max-height: 400px;
+    max-height: 900px;
     opacity: 1;
     margin-top: 1rem;
 }
