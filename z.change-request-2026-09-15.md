@@ -43,3 +43,32 @@ Overall: They love the design and appearance. These are tweaks, not a redo.
 
 ## Notes
 - Separate future project mentioned: "Harmony Integrative Oral and Facial Health" page - she'll send details later. Not part of this change set.
+
+## Follow-up info from Kristin (2026-09-15, later)
+
+### Referral form
+- Wix referral form: https://www.harmonymyotherapy.com/referral
+- **Decision needed:** Wix form won't work if we leave Wix. Our GitHub site is static.
+- **Recommended solution:** Rebuild the form as static HTML wired to a form-handling service (Web3Forms or Formspree, free tier). Submissions email to reception@harmonymyotherapy.com. No Wix, no backend to run.
+- Referral form is a CLINICAL CONCERN CHECKLIST. Fields captured from Wix:
+  - Restrictive Sublingual Frenulum, Restrictive Maxillary Labial Frenulum, Restrictive Mandibular Frenulum, Restrictive Buccal Frenulum
+  - Tongue-Thrust, Anterior Open Bite, Posterior Open Bite
+  - Mouth Breathing, Dysfunctional Breathing
+  - Thumbsucking/Finger Sucking, Other Negative Oral Habit
+  - Concerns for Craniofacial Growth and Development, Orofacial Pain
+  - Improper Tongue Rest Posture, Sleep/Airway, Speech
+- Simple contact form fields (from footer): First name, Last name, Email, Phone, Location, Message
+
+### Q&A page
+- https://www.harmonymyotherapy.com/questions-and-info
+- Content is more educational sections than strict Q&A (OMD causes, tongue-tie explainer, thumb sucking program, Buteyko, lactation/IBCLC). Need to shape into accordion or a hybrid info+FAQ layout.
+
+### Full staff bios
+- Scraped full "Show More" bios for all 7 team members. Current cards use shortened versions. Replace with full bios behind the Read Bio toggle.
+
+### Confirmed nav on real site
+- Services, Questions and Info, About, Referral, Harmony Integrative Orofacial Health, Blog, Contact
+- Confirms: Blog exists (keep running), separate "Harmony Integrative Orofacial Health" page (future project)
+
+### Confirmed locations
+- Calgary, Edmonton, Sherwood Park, Leduc, Beaumont, Grande Prairie

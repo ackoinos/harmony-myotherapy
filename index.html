@@ -47,8 +47,8 @@
             <p class="hero-subtitle">Orofacial myofunctional therapy and speech-language services for children and adults across Alberta.</p>
             <div class="hero-actions">
                 <a href="#services" class="btn btn-primary">Explore Services</a>
-                <!-- TODO: point to Kristin's self-referral form URL from old Wix site -->
-                <a href="#contact" class="btn btn-secondary">Book a Consultation</a>
+                <!-- Points to the live Wix referral form for now. To switch to the built-in static form, change href to "#referral" (see the hidden #referral section near the bottom of this file). -->
+                <a href="https://www.harmonymyotherapy.com/referral" target="_blank" rel="noopener" class="btn btn-secondary">Book a Consultation</a>
             </div>
         </div>
     </section>
@@ -400,29 +400,34 @@
                 <h2>Locations &amp; Availability</h2>
                 <p>Multiple clinic locations across Alberta with online appointments also available.</p>
             </div>
-            <!-- TODO: replace href="#contact" with Kristin's self-referral form URL from old Wix site -->
+            <!-- Location cards link to the live Wix referral form for now. To switch to the built-in static form, change hrefs to "#referral". -->
             <div class="locations-grid">
-                <a href="#contact" class="location-card">
-                    <h3>Edmonton / Leduc / Beaumont</h3>
+                <a href="https://www.harmonymyotherapy.com/referral" target="_blank" rel="noopener" class="location-card">
+                    <h3>Calgary</h3>
                     <p>In-person appointments available</p>
                     <span class="location-cta">Book / Refer &rarr;</span>
                 </a>
-                <a href="#contact" class="location-card">
+                <a href="https://www.harmonymyotherapy.com/referral" target="_blank" rel="noopener" class="location-card">
+                    <h3>Edmonton</h3>
+                    <p>In-person appointments available</p>
+                    <span class="location-cta">Book / Refer &rarr;</span>
+                </a>
+                <a href="https://www.harmonymyotherapy.com/referral" target="_blank" rel="noopener" class="location-card">
                     <h3>Sherwood Park</h3>
                     <p>In-person appointments available</p>
                     <span class="location-cta">Book / Refer &rarr;</span>
                 </a>
-                <a href="#contact" class="location-card">
+                <a href="https://www.harmonymyotherapy.com/referral" target="_blank" rel="noopener" class="location-card">
+                    <h3>Leduc / Beaumont</h3>
+                    <p>In-person appointments available</p>
+                    <span class="location-cta">Book / Refer &rarr;</span>
+                </a>
+                <a href="https://www.harmonymyotherapy.com/referral" target="_blank" rel="noopener" class="location-card">
                     <h3>Grande Prairie</h3>
                     <p>In-person appointments available</p>
                     <span class="location-cta">Book / Refer &rarr;</span>
                 </a>
-                <a href="#contact" class="location-card">
-                    <h3>Calgary SW / NW / SE</h3>
-                    <p>In-person appointments available</p>
-                    <span class="location-cta">Book / Refer &rarr;</span>
-                </a>
-                <a href="#contact" class="location-card location-card-online">
+                <a href="https://www.harmonymyotherapy.com/referral" target="_blank" rel="noopener" class="location-card location-card-online">
                     <h3>Online</h3>
                     <p>Virtual appointments available across Alberta</p>
                     <span class="location-cta">Book / Refer &rarr;</span>
@@ -443,6 +448,103 @@
                 </div>
                 <p class="contact-note">We'll get back to you within 1-2 business days.</p>
             </div>
+        </div>
+    </section>
+
+    <!--
+      ============================================================
+      HIDDEN: Built-in static referral form (Web3Forms)
+      ============================================================
+      This is a "back pocket" replacement for the Wix referral form,
+      styled to match the site. It is currently HIDDEN (the section has
+      the `hidden` attribute and links point to the Wix form instead).
+
+      TO ACTIVATE (once Kristin is ready to leave Wix):
+        1. Sign up at https://web3forms.com (free), create an access key
+           tied to reception@harmonymyotherapy.com
+        2. Paste the key into the value of the "access_key" input below
+        3. Remove the `hidden` attribute from the <section id="referral"> tag
+        4. Change the referral links (hero "Book a Consultation" button and
+           the location cards) from the Wix URL to href="#referral"
+      Nothing else is required. Submissions email straight to reception@.
+      ============================================================
+    -->
+    <section class="referral" id="referral" hidden>
+        <div class="container">
+            <div class="section-header">
+                <h2>Self-Referral Form</h2>
+                <p>Tell us a bit about your concerns and we'll be in touch to get you started.</p>
+            </div>
+            <form class="referral-form" action="https://api.web3forms.com/submit" method="POST">
+                <!-- TODO: paste Web3Forms access key here to activate -->
+                <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+                <input type="hidden" name="subject" value="New Self-Referral - Harmony Myofunctional Therapy">
+                <input type="hidden" name="from_name" value="Harmony Website Referral">
+                <!-- Honeypot spam trap -->
+                <input type="checkbox" name="botcheck" class="hidden-honeypot" style="display:none;" tabindex="-1" autocomplete="off">
+
+                <div class="form-row">
+                    <div class="form-field">
+                        <label for="ref-first">First name*</label>
+                        <input type="text" id="ref-first" name="first_name" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="ref-last">Last name*</label>
+                        <input type="text" id="ref-last" name="last_name" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-field">
+                        <label for="ref-email">Email*</label>
+                        <input type="email" id="ref-email" name="email" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="ref-phone">Phone*</label>
+                        <input type="tel" id="ref-phone" name="phone" required>
+                    </div>
+                </div>
+                <div class="form-field">
+                    <label for="ref-location">Preferred location*</label>
+                    <select id="ref-location" name="location" required>
+                        <option value="">Select a location</option>
+                        <option>Calgary</option>
+                        <option>Edmonton</option>
+                        <option>Sherwood Park</option>
+                        <option>Leduc / Beaumont</option>
+                        <option>Grande Prairie</option>
+                        <option>Online</option>
+                    </select>
+                </div>
+
+                <fieldset class="form-checklist">
+                    <legend>Reason for referral (select all that apply)</legend>
+                    <div class="checklist-grid">
+                        <label><input type="checkbox" name="concerns[]" value="Restrictive Sublingual Frenulum"> Restrictive Sublingual Frenulum</label>
+                        <label><input type="checkbox" name="concerns[]" value="Restrictive Maxillary Labial Frenulum"> Restrictive Maxillary Labial Frenulum</label>
+                        <label><input type="checkbox" name="concerns[]" value="Restrictive Mandibular Frenulum"> Restrictive Mandibular Frenulum</label>
+                        <label><input type="checkbox" name="concerns[]" value="Restrictive Buccal Frenulum"> Restrictive Buccal Frenulum</label>
+                        <label><input type="checkbox" name="concerns[]" value="Tongue-Thrust"> Tongue-Thrust</label>
+                        <label><input type="checkbox" name="concerns[]" value="Anterior Open Bite"> Anterior Open Bite</label>
+                        <label><input type="checkbox" name="concerns[]" value="Posterior Open Bite"> Posterior Open Bite</label>
+                        <label><input type="checkbox" name="concerns[]" value="Mouth Breathing"> Mouth Breathing</label>
+                        <label><input type="checkbox" name="concerns[]" value="Dysfunctional Breathing"> Dysfunctional Breathing</label>
+                        <label><input type="checkbox" name="concerns[]" value="Thumbsucking/Finger Sucking"> Thumbsucking / Finger Sucking</label>
+                        <label><input type="checkbox" name="concerns[]" value="Other Negative Oral Habit"> Other Negative Oral Habit</label>
+                        <label><input type="checkbox" name="concerns[]" value="Concerns for Craniofacial Growth and Development"> Craniofacial Growth &amp; Development</label>
+                        <label><input type="checkbox" name="concerns[]" value="Orofacial Pain"> Orofacial Pain</label>
+                        <label><input type="checkbox" name="concerns[]" value="Improper Tongue Rest Posture"> Improper Tongue Rest Posture</label>
+                        <label><input type="checkbox" name="concerns[]" value="Sleep/Airway"> Sleep / Airway</label>
+                        <label><input type="checkbox" name="concerns[]" value="Speech"> Speech</label>
+                    </div>
+                </fieldset>
+
+                <div class="form-field">
+                    <label for="ref-message">Anything else you'd like us to know?</label>
+                    <textarea id="ref-message" name="message" rows="4"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-large">Submit Referral</button>
+            </form>
         </div>
     </section>
 
