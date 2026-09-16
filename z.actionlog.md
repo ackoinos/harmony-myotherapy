@@ -105,3 +105,22 @@
 - Kristin to decide: stay on Wix vs move off (activates the hidden Web3Forms referral form + domain switch)
 - Wix login needed to point the domain
 - "For Referring Professionals" tab, blog CMS, Harmony Integrative Orofacial Health page - future
+
+# 2026-09-15 - Logo hi-res + Kristin feedback round
+
+> Kristin: logo small/blurry at top. Then replied loving the site with 3 points: (1) already paid 3yr Wix so staying on Wix, (2) wants to eventually link Harmony Integrative Orofacial Health (sister company), (3) remove the tongue-tie release photo since they do therapy not the surgery.
+
+**Actions Taken:**
+- Re-fetched logo from Wix CDN at 1200x540 (was 191x86) -> `images/logo-full.png`. Sharp now.
+- Nav logo 64px full-color on light header; footer logo 64px white-on-dark (brightness(0) invert(1)) restored after a brief misstep with a white background box.
+- Removed tongue-tie release image from Q&A Tongue-Tie topic; softened "surgical outcome" -> "outcome" wording (they do therapy, not surgery).
+- Drafted reply email `reply-to-kristin-2026-09-15b.md`.
+
+**Decisions locked:**
+- Staying on Wix (3yr prepaid) -> referral buttons keep pointing to the Wix form. Hidden Web3Forms form stays as back-pocket only.
+
+**Next session TODO (chat was getting long, continuing fresh):**
+- Link "Harmony Integrative Orofacial Health" (sister company) - add to nav as a link to their site or a section/page here. Waiting on Kristin for their URL, logo, and a blurb.
+- "For Referring Professionals" tab - still not built.
+- Blog CMS - future, only if she wants self-service posting.
+- Domain switch NOT happening (staying on Wix), so no DNS/CNAME work needed. Site lives on GitHub Pages preview (ackoinos.github.io/harmony-myotherapy) unless she wants it on the real domain later.
