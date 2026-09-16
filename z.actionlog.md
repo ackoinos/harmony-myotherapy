@@ -88,3 +88,20 @@
 - "For Referring Professionals" tab - not yet built
 - Harmony Integrative Orofacial Health page - separate future project
 - Wix login still needed to point the domain
+
+# 2026-09-15 - Q&A media accuracy fix + reply email
+
+> Kristin flagged: Q&A pictures didn't match sections, Mouth Breathing and Sleep Apnea had YouTube videos, and there was a Photo Examples section. Also asked to review the referral form and whether to stay on Wix.
+
+**Actions Taken:**
+- Re-scraped Q&A page topic-by-topic (structural DOM capture) to map media accurately. Found the clinical photos all belong to a "Photo Examples" section, not scattered across topics.
+- Extracted the two YouTube video IDs by triggering Wix's lazy-loaded video players and capturing embed URLs from network traffic: Mouth Breathing (3h0JgmmLj_Q), Obstructive Sleep Apnea (cxEWHV67JIU).
+- Rebuilt Q&A page: added Photo Examples section (6 clinical photos), embedded both videos (youtube-nocookie, responsive 16:9), corrected per-topic images, matched original topic order. Removed images that weren't actually in their sections.
+- Confirmed Web3Forms free tier: 250 submissions/month free forever, no card. Verified via their pricing page.
+- Drafted reply email to Kristin (`reply-to-kristin-2026-09-15.md`) summarizing all round 2/3 changes and laying out the Wix stay-or-leave decision in non-technical terms, including a plain-language note that the built-in form uses a free email service (same model as Wix, nothing new in data handling).
+- Sent Kristin the GitHub Pages preview link (always current) rather than the Netlify one (stopped builds).
+
+**Still outstanding:**
+- Kristin to decide: stay on Wix vs move off (activates the hidden Web3Forms referral form + domain switch)
+- Wix login needed to point the domain
+- "For Referring Professionals" tab, blog CMS, Harmony Integrative Orofacial Health page - future
