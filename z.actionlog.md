@@ -113,7 +113,7 @@
 **Actions Taken:**
 - Re-fetched logo from Wix CDN at 1200x540 (was 191x86) -> `images/logo-full.png`. Sharp now.
 - Nav logo 64px full-color on light header; footer logo 64px white-on-dark (brightness(0) invert(1)) restored after a brief misstep with a white background box.
-- Removed tongue-tie release image from Q&A Tongue-Tie topic; softened "surgical outcome" -> "outcome" wording (they do therapy, not surgery).
+- Tongue-Tie topic: removed only the caption "Tongue-tie release at Harmony" (kept the image). Kristin's note was on the caption, not the photo. Softened "surgical outcome" -> "outcome" (they do therapy, not surgery).
 - Drafted reply email `reply-to-kristin-2026-09-15b.md`.
 
 **Decisions locked:**
