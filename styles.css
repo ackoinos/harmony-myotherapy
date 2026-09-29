@@ -1046,10 +1046,11 @@ img {
     }
 }
 
-/* --- Referral Form (hidden back-pocket static form) --- */
+/* --- Referral Form (static Web3Forms) --- */
 .referral {
     padding: var(--section-padding);
     background: var(--color-bg);
+    scroll-margin-top: 90px;
 }
 
 .referral-form {
