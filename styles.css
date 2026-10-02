@@ -1353,11 +1353,8 @@ img {
     }
 }
 
-@media (max-width: 768px) {
-    :root {
-        --section-padding: 4rem 1.5rem;
-    }
-
+/* Switch navigation before the full link row crowds the logo on tablets. */
+@media (max-width: 1200px) {
     .nav-toggle {
         display: flex;
     }
@@ -1383,6 +1380,13 @@ img {
     .nav-cta {
         width: 100%;
         text-align: center;
+    }
+
+}
+
+@media (max-width: 768px) {
+    :root {
+        --section-padding: 4rem 1.5rem;
     }
 
     .hero {
